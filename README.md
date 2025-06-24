@@ -1,24 +1,15 @@
-# Welcome to My Profile! 👋  
+# Welcome to My Profile! 👋
 
-**Hello there!** I'm Ray aji - welcome to my coding journey repository.  
+**Hello there!** Welcome to my coding journey repository. 
 
-🌱 *"First time here? Awesome! I share monthly updates here."*  
-💡 *"Come back often - next update coming soon!"*  
+🌱 *"First time here? Awesome! I'm Ray aji and I share my development experiences here."*  
+💡 *"Come back often - I update this monthly with new learnings!"*
 
-## 🎯 Visitor Features  
+👉 [Kembali ke Beranda](./home.html)
 
-[![Visitors](https://visitor-badge.laobi.icu/badge?page_id=rayaji.profile)](https://github.com/rayaji)  
-![Profile Views](https://komarev.com/ghpvc/?username=rayaji&label=Profile+Views&color=blueviolet)  
+[![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=rayaji.profile)](https://github.com/rayaji)
 
-📅 **Last Updated:** 24 June 2025  
-⏰ **Local Time:** *Check your clock - it's coffee time somewhere!* ☕  
+📅 **©  24 June 2025**  
+🔗 **Quick Links:** [Projects](./projects) | [About Me](./about) | [Contact](./contact)
 
-## 🔗 Quick Navigation  
-| [Projects](#projects) | [About Me](#about) | [Contact](#contact) |  
-|-----------------------|--------------------|---------------------|
-
-## ✨ Interactive Elements  
-### 🗓️ Update Timeline  
-```markdown
-- ✅ June 2025: Added visitor counter  
-- 🚧 Coming Soon: Python automation tutorial  
+i like this one can you add some features for user who fisit my web?
