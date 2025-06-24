@@ -1,21 +1,52 @@
-# 404 - Page Not Found 🚫
+# Welcome to My Profile! 👋
 
-Oops! It seems the page or file you're looking for doesn't exist in this repository.
+<div id="welcome-message"></div>
 
-## What you can do:
+<script>
+// Welcome message generator
+function showWelcome() {
+  const greetings = [
+    "Hello there!", 
+    "Welcome traveler!",
+    "Hey friend!",
+    "Greetings visitor!",
+    "Hi there, awesome person!"
+  ];
+  
+  const times = [
+    "Hope you're having a wonderful day!",
+    "Great to see you here!",
+    "Thanks for stopping by!",
+    "Make yourself at home!",
+    "Let's explore together!"
+  ];
+  
+  const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+  const randomTime = times[Math.floor(Math.random() * times.length)];
+  
+  // Detect first visit
+  if (!localStorage.getItem('visited')) {
+    localStorage.setItem('visited', 'true');
+    return `${randomGreeting} First time here? Awesome! ${randomTime}`;
+  } else {
+    return `${randomGreeting} Welcome back! ${randomTime}`;
+  }
+}
 
-🔹 [Return to Homepage](./home.html)  
-🔹 [View Repository on GitHub](https://github.com/rayaji/profile)  
-🔹 [Check my monthly updates](#) *(coming soon)*  
+document.getElementById('welcome-message').innerHTML = `
+  <div class="welcome-box">
+    <p>${showWelcome()}</p>
+    <p>This is my personal space where I share my coding journey and projects.</p>
+  </div>
+`;
+</script>
 
-## Common Issues:
-
-- Double-check the URL for typos
-- The page may have been moved or renamed
-- The content might not be published yet
-
----
-
-📅 *This repository is regularly updated every month. Last update: {{MONTH}} {{YEAR}}*  
-
-🙋 **Need help?** [Open an issue](https://github.com/rayaji/profile/issues) on GitHub!
+<style>
+.welcome-box {
+  background-color: #f8f9fa;
+  border-left: 4px solid #2f80ed;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+</style>
