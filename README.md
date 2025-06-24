@@ -1,7 +1,7 @@
 # profile
 This repository will be fully of my (rayaji) experience and also will often update every month!
 ---
-permalink: /404.html
+# try this add on this domain: /profile/home.html
 ---
 
 # 🚫 404 - Halaman Tidak Ditemukan
