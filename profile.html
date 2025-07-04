@@ -1,97 +1,270 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RAY AJI .D.D | shorts profile</title>
-    <link rel="stylesheet" type="text/css" href="SP.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
-
-    <link rel="stylesheet" 
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
-    />
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-      body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #f5f5f5;
-    color: #333;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-h1 {
-    color: #2c3e50;
-}
-
-section {
-    margin-bottom: 30px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-a {
-    color: #3498db;
-    text-decoration: none;
-    margin-right: 15px;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 5px solid white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-links a {
+            color: var(--dark);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .about-text {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .skill-chip {
+            background-color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            font-weight: 500;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .project-links a {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
-  </head>
-  
-  <body>
-<header>
-    <h1>Your Name</h1>
-    <p>Web Developer | Designer | Student</p>
-</header>
-
-<section id="about">
-    <h2>About Me</h2>
-    <p>A short bio here...</p>
-</section>
-
-<section id="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML/CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-    </ul>
-</section>
-
-<section id="contact">
-    <h2>Connect With Me</h2>
-    <a href="https://github.com/bleazemyfire">GitHub</a>
-    <a href="https://linkedin.com/yourprofile">LinkedIn</a>
-</section>
-    
-  </body>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://via.placeholder.com/150" alt="Profile" class="profile-img">
+            <h1>Your Name</h1>
+            <p class="tagline">Web Developer | Designer | Problem Solver</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </header>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="about-text">
+                I'm a passionate developer with experience in building web applications and solving complex problems. 
+                I love creating clean, efficient code and designing intuitive user experiences.
+            </p>
+            <p class="about-text">
+                When I'm not coding, you can find me exploring new technologies, contributing to open source, 
+                or enjoying outdoor activities.
+            </p>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <span class="skill-chip">HTML/CSS</span>
+                <span class="skill-chip">JavaScript</span>
+                <span class="skill-chip">React</span>
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">Git</span>
+                <span class="skill-chip">UI/UX Design</span>
+                <span class="skill-chip">Node.js</span>
+                <span class="skill-chip">SQL</span>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Project 1" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Project Name</h3>
+                        <p>A brief description of what this project is about and what technologies were used.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Project 2" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Project Name</h3>
+                        <p>A brief description of what this project is about and what technologies were used.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2023 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
 </html>
