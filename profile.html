@@ -170,6 +170,48 @@
             align-items: center;
             gap: 0.3rem;
         }
+        /* Back to Top Button Styles */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.back-to-top:hover {
+    background-color: var(--secondary);
+    transform: translateY(-3px);
+}
+
+.back-to-top i {
+    font-size: 1.2rem;
+}
+        /* Add to your CSS */
+body.dark-mode {
+    background-color: #111;
+    color: #f0f0f0;
+}
+/* Add JavaScript toggle */
+        @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeIn 0.6s ease-out;
+}
         
         footer {
             text-align: center;
@@ -258,10 +300,33 @@
                 </div>
             </div>
         </section>
+        <!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
         
         <footer>
-            <p>© 2023 Your Name. All rights reserved.</p>
+            <p>© 2025 Ray aji dipa dinangga. All rights reserved.</p>
         </footer>
     </div>
+    <script>
+    // Back to Top Button Functionality
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.style.display = 'flex';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    </script>
 </body>
 </html>
