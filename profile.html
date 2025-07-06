@@ -10,8 +10,8 @@
         :root {
             --primary: #29fd53;
             --secondary: #27ae60;
-            --dark: #1a1a1a;
-            --light: #2ecc71;
+            --dark: #fff;
+            --light: #222327;
             --gray: #6b7280;
         }
         
@@ -111,11 +111,11 @@
         .skills-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            grid-gap: 1rem;
         }
         
         .skill-chip {
-            background-color: white;
+            background-color: var(--light);
             padding: 0.5rem 1.2rem;
             border-radius: 50px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -126,11 +126,11 @@
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-gap: 2rem;
         }
         
         .project-card {
-            background: white;
+            background: var(--light);
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -200,8 +200,8 @@
 }
         /* Add to your CSS */
 body.dark-mode {
-    background-color: #111;
-    color: #f0f0f0;
+    background-color: #ffffff;
+    color: #000000;
 }
 /* Add JavaScript toggle */
         @keyframes fadeIn {
