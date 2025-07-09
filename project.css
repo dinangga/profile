@@ -1,0 +1,166 @@
+/*style css*/
+body{
+  height:;
+  margin:;
+  display:;
+  place-items:;
+  background:;
+}
+
+:root {
+  --color-muted:;
+  --color-text:;
+}
+
+* {
+  box-sizing:;
+}
+
+card {
+  display:;
+  flex-direction:;
+  position:;
+  background:;
+  box-shadow:;
+  border-radius:;
+  padding:;
+  width:;
+}
+.image {
+  position:;
+  inset:;
+  object-fit:;
+  border-radius:;
+}
+
+.content {
+  position:;
+  z-index:;
+  align-self:;
+  padding:;
+  border-radius:;
+  background:;
+  color:;
+}
+
+h2 {
+  margin-bottom:;
+}
+h3 {
+  margin:;
+  color:;
+}
+
+/*style.css*/
+p {
+  color:;
+  white-space:;
+  overlow:;
+  text-overlow:;
+  margin:;
+}
+
+.read-more {
+  font-size:;
+  display:;
+  margin:;
+}
+
+.details {
+  display:;
+  grid-gap:;
+  margin-bottom:;
+}
+
+.item {
+  display:;
+  grid-gap:;
+  align-item:;
+}
+
+.bottons {
+  display:;
+  grid-gap:;
+}
+
+.primary-btn {
+  width:;
+  border:;
+  background:;
+  color:;
+  font-family:;
+  border-radius:;
+  padding:;
+  height:;
+  font-size:;
+}
+
+.icon-btn {
+  position:;
+  top:;
+  right:;
+  border:;
+  color:;
+  display:;
+  place-items:;
+  border-radius:;
+  height:;
+  background:;
+}
+
+@media (width >= 480px) {
+  .icon-btn {
+    position:;
+    min-width:;
+  }
+}
+
+/*styles.css*/
+@media (width >= 640px) {
+  .icon-btn {
+    min-width:;
+    background:;
+    color:;
+  }
+  
+  p {
+    whitw-space:;
+    margin-bottom:;
+  }
+
+  .read-more {
+    display:;
+  }
+
+  .card {
+    max-width:;
+    padding:;
+    flex-direction:;
+  }
+  
+  .image {
+    position:;
+    height:;
+    width:;
+    min-width:;
+    margin-left:;
+    align-self:;
+    box-shadow:;
+  }
+  
+  .content {
+  display:;
+    flex-diection:;
+    justify-content:;
+    flex:;
+    background:;
+    color:;
+    padding:;
+  }
+
+  primary-btn {
+    background:;
+    color:;
+    max-width:;
+  }
+}
