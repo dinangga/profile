@@ -1,167 +1,174 @@
-/*style css*/
-body{
-  height: 100vh;
-  margin: 0;
-  display: grid;
-  place-items: center;
-  background: #ffe7ce;
-}
-
 :root {
-  --color-muted: #a4a4a4;
-  --color-text: #2b2d29;
+  --color-primary: #6C63FF;
+  --color-muted: #6B7280;
+  --color-text: #2B2D29;
+  --color-light: #F9FAFB;
+  --color-dark: #111827;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-card {
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #F3F4F6;
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+}
+
+.card {
   display: flex;
   flex-direction: column;
-  position: relative;
   background: #ffffff;
-  box-shadow: 0 20px 50px rgb(0 0 0 / 8%);
-  border-radius: 36px;
-  padding: 8px;
-  width: 75vw;
+  box-shadow: var(--shadow);
+  border-radius: 24px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
 .image {
-  position: absolute;
-  inset: 8px;
+  width: 100%;
+  height: 240px;
   object-fit: cover;
-  border-radius: 28px;
+  display: block;
 }
 
 .content {
+  padding: 24px;
   position: relative;
-  z-index: 1;
-  align-self: stretch;
-  padding: 200px 32px 32px;
-  border-radius: inherit;
-  background: liner-gradient( rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 50%) 50%);
-  color: #f9f9f9;
 }
 
 h2 {
-  margin-bottom: 0;
-}
-h3 {
-  margin: 0 0 20px;
-  color: var(--color-muted);
+  font-size: 1.5rem;
+  color: var(--color-dark);
+  margin-bottom: 4px;
 }
 
-/*style.css*/
+h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
 p {
-  color: va(--color-muted);
-  white-space: nowrap;
-  overlow: hidden;
-  text-overlow: ellipsis;
-  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin-bottom: 16px;
 }
 
 .read-more {
-  font-size: 14px;
-  display: block;
-  margin: 6px 0 18px;
+  display: inline-block;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+
+.read-more:hover {
+  color: var(--color-dark);
+  text-decoration: underline;
 }
 
 .details {
   display: flex;
-  grid-gap: 16px;
-  margin-bottom: 28px;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
 .item {
   display: flex;
-  grid-gap: 4px;
-  align-item: center;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-muted);
+  font-size: 0.875rem;
 }
 
-.bottons {
+.material-symbols-outlined {
+  font-size: 18px;
+}
+
+.buttons {
   display: flex;
-  grid-gap: 8px;
+  gap: 12px;
 }
 
 .primary-btn {
-  width: 100%;
+  flex: 1;
   border: 0;
-  background: #111111;
-  color: var(--color-text);
+  background: var(--color-primary);
+  color: white;
   font-family: inherit;
-  border-radius: 32px;
-  padding: 0 24px;
-  height: 48px;
-  font-size: 15px;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.primary-btn:hover {
+  background: #5a52e0;
 }
 
 .icon-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
   border: 0;
-  color: #f9f9f9;
-  display:grid;
+  color: var(--color-muted);
+  display: grid;
   place-items: center;
-  border-radius: 50px;
+  border-radius: 8px;
   height: 48px;
   width: 48px;
-  background: rgb(255 255 255 / 10%);
+  background: var(--color-light);
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
-@media (width >= 480px) {
-  .icon-btn {
-    position: static;
-    min-width: 48px;
-  }
+.icon-btn:hover {
+  background: #E5E7EB;
+  color: var(--color-primary);
 }
 
-/*styles.css*/
-@media (width >= 640px) {
-  .icon-btn {
-    min-width: 48px;
-    background: rgb(0 0 0 / 4%);
-    color: var(--color-text);
-  }
-  
-  p {
-    whitw-space: inherit;
-    margin-bottom: 24px;
-  }
-
-  .read-more {
-    display: none;
-  }
-
+@media (min-width: 768px) {
   .card {
-    max-width: 700px;
-    padding: 24px;
     flex-direction: row;
+    height: 360px;
   }
   
   .image {
-    position: static;
-    height: 360px;
-    width: 50%;
-    min-width: 50%;
-    margin-left: -56px;
-    align-self: stretch;
-    box-shadow: 0 20px 58px rgb(0 0 0 / 8%);
+    width: 45%;
+    height: 100%;
+    border-radius: 16px 0 0 16px;
   }
   
   .content {
-  display: flex;
-    flex-diection: column;
+    width: 55%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex: 1 1 auto;
-    background: transparent;
-    color: var(--color-text);
-    padding: 0 32px;
   }
-
-  primary-btn {
-    background: var(--color-text);
-    color: #f9f9f9;
-    max-width: 70%;
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.125rem;
   }
 }
